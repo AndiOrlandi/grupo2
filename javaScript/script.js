@@ -1,3 +1,4 @@
+
 //holi
 // Clase de Practica
 
@@ -44,3 +45,12 @@ function listarElementos (){
     console.log(carrito)
 }
 
+let eliminarProductos= ()=>{
+    let productoEliminado = prompt("que producto desea eliminar")
+    let index=carrito.indexOf(productoEliminado)
+    if(index!==-1){
+        carrito.splice(index, 1)
+    }
+    console.log(`el carrito queda asi: ${carrito}`)
+}
+eliminarProductos()
