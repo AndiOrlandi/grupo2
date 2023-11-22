@@ -1,5 +1,5 @@
 //holi
-/ Clase de Practica
+// Clase de Practica
 
 // 1.- Crear un repo en github.
 // 2.- Crear la rama dev. 
@@ -20,8 +20,27 @@
 // o una letra
 // ● Eliminar producto del carrito
 
-arrayCarrito=[1,2,3]
 
-function (listarElementos){
-    console.log(arrayCarrito)
+
+
+let carrito = [];
+
+cargarProductos();
+
+function cargarProductos (){
+    let n1 = parseInt(prompt("Digita la cantidad de elementos del array"))
+
+    for (let i = 0; i < n1; i++) {
+        parseInt(carrito.push(prompt(`Digita el elemento [${i + 1}] del array`)))
+    }
+    
+    console.log(`Tu carrito completo es: [${carrito}]`)
+
 }
+
+listarElementos();
+
+function listarElementos (){
+    console.log(carrito)
+}
+
