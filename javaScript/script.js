@@ -19,3 +19,9 @@
 // ● Filtrar productos que coincidan con una palabra, parte de ella
 // o una letra
 // ● Eliminar producto del carrito
+
+arrayCarrito=[1,2,3]
+
+function (listarElementos){
+    console.log(arrayCarrito)
+}
