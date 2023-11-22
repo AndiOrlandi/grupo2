@@ -1,4 +1,3 @@
-
 //holi
 // Clase de Practica
 
@@ -54,3 +53,11 @@ let eliminarProductos= ()=>{
     console.log(`el carrito queda asi: ${carrito}`)
 }
 eliminarProductos()
+function buscarProductos(){
+    let x= prompt("escriba el producto")
+    if (x!==carrito){
+        let posicion = carrito.indexOf(x);
+        console.log(posicion);
+    }  
+}
+buscarProductos()
