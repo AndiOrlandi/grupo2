@@ -1,4 +1,3 @@
-
 //holi
 // Clase de Practica
 
@@ -26,13 +25,13 @@ let carrito = [];
 cargarProductos();
 
 function cargarProductos (){
-    let n1 = parseInt(prompt("Digita la cantidad de elementos del array"))
+    let n1 = parseInt(prompt("Digita la cantidad de elementos del carrito"))
     
     for (let i = 0; i < n1; i++) {
-        parseInt(carrito.push(prompt(`Digita el elemento [${i + 1}] del array`)))
+        parseInt(carrito.push(prompt(`Digita el elemento [${i + 1}] del carrito`)))
     }
     
-    console.log(`Tu carrito completo es: [${carrito}]`)
+    // console.log(`Tu carrito completo es: [${carrito}]`)
     
 }
 
@@ -48,23 +47,26 @@ let eliminarProductos= ()=>{
     if(index!==-1){
         carrito.splice(index, 1)
     }
-    console.log(`el carrito queda asi: ${carrito}`)
+    console.log(`el carrito queda asi: [${carrito}]`)
 }
 eliminarProductos()
+
+
+buscarProductos();
+
 function buscarProductos(){
-    let x= prompt("escriba el producto")
-    if (x!==carrito){
+    let x= prompt("escriba el producto a buscar")
         let posicion = carrito.indexOf(x);
-        console.log(posicion);
-    }  
+        console.log(posicion+Number(1));
 }
-buscarProductos()
+
 
 /**
  * Filtra la matríz en función de un criterio de búsqueda (query)
  */
+
 function filtrarProducto() {
-  let productoABuscar=prompt("ingresa tu producto a buscar")
+  let productoABuscar=prompt("ingresa tu producto a filtrar")
     return carrito.filter(function (el) {
     return el.toLowerCase().indexOf(productoABuscar.toLowerCase()) > -1;
 });
