@@ -1,3 +1,4 @@
+
 //holi
 // Clase de Practica
 
@@ -20,22 +21,19 @@
 // o una letra
 // ● Eliminar producto del carrito
 
-
-
-
 let carrito = [];
 
 cargarProductos();
 
 function cargarProductos (){
     let n1 = parseInt(prompt("Digita la cantidad de elementos del array"))
-
+    
     for (let i = 0; i < n1; i++) {
         parseInt(carrito.push(prompt(`Digita el elemento [${i + 1}] del array`)))
     }
     
     console.log(`Tu carrito completo es: [${carrito}]`)
-
+    
 }
 
 listarElementos();
@@ -61,3 +59,16 @@ function buscarProductos(){
     }  
 }
 buscarProductos()
+
+/**
+ * Filtra la matríz en función de un criterio de búsqueda (query)
+ */
+function filtrarProducto() {
+  let productoABuscar=prompt("ingresa tu producto a buscar")
+    return carrito.filter(function (el) {
+    return el.toLowerCase().indexOf(productoABuscar.toLowerCase()) > -1;
+});
+
+}
+
+console.log(filtrarProducto()); 
